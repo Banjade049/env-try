@@ -1,0 +1,14 @@
+
+on:
+  push:
+    paths:
+      - script.js
+
+jobs:
+ first_job:
+   runs-on: ubuntu-latest
+   env:
+     MY_VAR: "Production"
+   steps:
+     - name: check environment
+       run: echo "Environment is ${{env.MY_VAR}}"
